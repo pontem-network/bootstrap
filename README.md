@@ -72,8 +72,8 @@ Now create your validator:
 1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
 2. Choose `parachainStaking` pallet.
 3. Choose `joinCandidates(bond, candidate_count)` function.
+4. Put amount to bond in PONT tokens.  
 _Note: for the collator to work, `1000 PONT` or more are required._
-4. Put amount to bond in PONT tokens.
 5. For candidate_count use `1`.
 6. Send transaction.
 
