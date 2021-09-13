@@ -72,6 +72,7 @@ Now create your validator:
 1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
 2. Choose `parachainStaking` pallet.
 3. Choose `joinCandidates(bond, candidate_count)` function.
+_Note: for the collator to work, `1000 PONT` or more are required._
 4. Put amount to bond in PONT tokens.
 5. For candidate_count use `1`.
 6. Send transaction.
@@ -80,6 +81,7 @@ Now time to launch your node.
 
 ## Step 6: Launch node
 Run node:
+_Note: the collator will start its work in the next round, each round lasts `300` blocks._
 ```sh
 docker-compose up -d
 ```
@@ -92,6 +94,12 @@ docker-compose logs -f --tail 10
 Stop node:
 ```sh
 docker-compose down
+```
+
+If you need additional node configuration, you can add additional arguments to the `docker-compose.yml` file in the` command` line.
+To view all parameters of a node:
+```sh
+docker-compose run pontem-node pontem --help
 ```
 
 ## Documentation
