@@ -96,7 +96,7 @@ Stop node:
 docker-compose down
 ```
 
-If you need additional node configuration, you can add additional arguments to the `docker-compose.yml` file in the` command` line.
+If you need additional node configuration, you can add additional arguments to the `docker-compose.yml` file in the `command` line.
 To view all parameters of a node:
 ```sh
 docker-compose run pontem-node pontem --help
