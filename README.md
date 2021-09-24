@@ -38,7 +38,9 @@ Add Nimbus key:
 docker-compose run pontem-node pontem key insert --suri "<you_mnemonic>" --keystore-path /opt/pontem/keys --key-type nmbs
 ```
 
-## Step 5: Connect as a new collator
+## Step 5: Become collator
+
+**Ignore this step if you just want to launch node and don't want to become collator**
 
 Get your public key:
 ```sh
@@ -46,38 +48,7 @@ Get your public key:
 docker-compose run pontem-node pontem key inspect --keystore-path /opt/pontem/keys "<you_mnemonic>"
 ```
 
-You will see something like (for example):
-```sh
-Secret Key URI `//Bob` is account:
-Secret seed:       0x02ca07977bdc4c93b5e00fcbb991b4e8ae20d05444153fd968e04bed6b4946e7
-Public key (hex):  0xb832ced5ca2de9fe76ef101d8ab1b8dd778e1ab5a809d019c57b78e45ecbaa56
-Public key (SS58): 5GEDm6TY5apP4bhwuTtTzA7z9vHbCL1V2D5nE8sPga6WKhNH
-Account ID:        0xb832ced5ca2de9fe76ef101d8ab1b8dd778e1ab5a809d019c57b78e45ecbaa56
-SS58 Address:      5GEDm6TY5apP4bhwuTtTzA7z9vHbCL1V2D5nE8sPga6WKhNH
-```
-
-Copy `Public key (hex)` as your public key, it's going to be your validator public key.
-Now you need to map your public key with your account.
-
-Send new transaction to map your public key with your account:
-
-1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
-2. Choose `authorMapping` pallet.
-3. Choose `addAssociation(author_id)` function.
-4. Put your public key in `author_id` field.
-5. Send transaction from your account.
-
-Now create your validator:
-
-1. Navigate to [extrinsics](https://polkadot.js.org/apps/?rpc=wss://testnet.pontem.network/ws#/extrinsics).
-2. Choose `parachainStaking` pallet.
-3. Choose `joinCandidates(bond, candidate_count)` function.
-4. Put amount to bond in PONT tokens.  
-_Note: for the collator to work, `1000 PONT` or more are required._
-5. For candidate_count use `1`.
-6. Send transaction.
-
-Now time to launch your node.
+Navigate to [Pontem Docs](https://docs.pontem.network/03.-staking/collator) to see next steps.
 
 ## Step 6: Launch node
 Run node:
