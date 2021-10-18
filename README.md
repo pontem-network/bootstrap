@@ -1,4 +1,5 @@
 # Pontem Bootstrap
+***Important: Only the x86_64 architecture is supported at the moment. Work on Apple M1 and armv7 is in progress.***
 ## Step 1: Install docker and docker-compose
 For this option to work you'll need [Docker](https://docs.docker.com/engine/install/) (v18.06.0+) and [docker-compose](https://docs.docker.com/compose/install/) (v3.7+).
 
