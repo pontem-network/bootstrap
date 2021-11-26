@@ -22,6 +22,8 @@ nano .env # or vi .env # or any editor you choose
 ```
 
 ## Step 4: Build docker and generate keys
+*Note: If you want to use prebuild image from the docker hub, uncomment this line ```#image: pontem/pontem:${PONTEM_VERSION}``` in docker-compose.yml and comment out the ```build``` section. Also use ```docker-compose pull``` instead of ```docker-compose build```*
+
 The first thing to do is build the docker container (important note: if you change the `.env` file, you need to rebuild the container).:
 ```sh
 docker-compose build

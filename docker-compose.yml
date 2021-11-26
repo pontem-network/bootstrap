@@ -5,6 +5,7 @@ services:
     container_name: pontem-node
     hostname: pontem-node
     restart: always
+    #image: pontem/pontem:${PONTEM_VERSION}
     build:
       context: .build
       dockerfile: ${DOCKERFILE} # If you have errors when building or executing, please read the description in the .env.testnet
