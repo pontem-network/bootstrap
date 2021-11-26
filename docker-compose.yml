@@ -9,9 +9,9 @@ services:
       context: .build
       dockerfile: ${DOCKERFILE} # If you have errors when building or executing, please read the description in the .env.testnet
       args:
-        PONTEM_VERSION: v0.4.2
-        DOVE_VERSION: 1.3.3
-        NODE_VERSION: 16
+        PONTEM_VERSION: ${PONTEM_VERSION}
+        DOVE_VERSION: ${DOVE_VERSION}
+        NODE_VERSION: ${NODE_VERSION}
     ports:
       - "127.0.0.1:9934:9934"   # relaychain rpc
       - "127.0.0.1:9945:9945"   # relaychain ws
@@ -28,7 +28,6 @@ services:
     volumes:
       - ./genesis/genesis-raw-relaychain-${GENESIS}.json:/opt/pontem/genesis-relaychain.json
       - ./genesis/genesis-raw-pontem-${GENESIS}.json:/opt/pontem/genesis.json
-      - ./data:/opt/pontem/data/chains/pontem_testnet/db
-      - ./configs:/opt/pontem/data/chains/pontem_testnet
+      - ./data:/opt/pontem/data
       - ./keys:/opt/pontem/keys
     command: pontem --base-path /opt/pontem/data --chain /opt/pontem/genesis.json --keystore-path /opt/pontem/keys --collator --name ${NODE_NAME} --parachain-id 2000 --port 30333 --ws-port 9944 --rpc-port 9933 ${PUBLIC_ADDR_PARACHAIN} ${BOOTNODES_PARACHAIN} -- --execution wasm --chain /opt/pontem/genesis-relaychain.json --port 30334 --ws-port 9945 --rpc-port 9934 ${PUBLIC_ADDR_RELAYCHAIN} ${BOOTNODES_RELAYCHAIN}
