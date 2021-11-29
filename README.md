@@ -50,8 +50,7 @@ Get your public key:
 # Replace <you_mnemonic> with your mnemonic phrase.
 docker-compose run pontem-node pontem key inspect --keystore-path /opt/pontem/keys "<you_mnemonic>"
 ```
-
-Navigate to [Pontem Docs](https://docs.pontem.network/03.-staking/collator) to see next steps.
+***Now you need to navigate to [Pontem Docs](https://docs.pontem.network/03.-staking/collator) and follow all the steps given there.***
 
 ## Step 6: Launch node
 Run node:
