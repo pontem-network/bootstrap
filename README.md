@@ -1,7 +1,7 @@
 # Pontem Bootstrap
 > ***IMPORTANT: If you are using an Apple computer on the M1 chip or any other non x86_64 architecture (like the Raspberry Pi and others), you need to use the source build. In the `.env` file specify `DOCKERFILE=source.Dockerfile` instead of `DOCKERFILE=Dockerfile`. You need at least 16gb of RAM for the build!***
 ## Step 1: Install docker and docker-compose
-For this option to work you'll need [Docker](https://docs.docker.com/engine/install/) (v18.06.0+) and [docker-compose](https://docs.docker.com/compose/install/) (v3.7+).
+For this option to work you'll need [Docker](https://docs.docker.com/engine/install/) (v18.06.0+) and [docker-compose](https://docs.docker.com/compose/install/) (v1.29+).
 
 ## Step 2: Clone this repo
 ```sh
