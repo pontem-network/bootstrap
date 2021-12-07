@@ -20,6 +20,7 @@ services:
       - "127.0.0.1:9933:9933"   # parachain rpc
       - "127.0.0.1:9944:9944"   # parachain ws
       - "30333:30333"           # parachain p2p
+      - "9615:9615"             # prometheus metrics
     logging:
       driver: "json-file"
       options:
@@ -31,4 +32,4 @@ services:
       - ./genesis/genesis-raw-pontem-${GENESIS}.json:/opt/pontem/genesis.json
       - ./data:/opt/pontem/data
       - ./keys:/opt/pontem/keys
-    command: pontem --base-path /opt/pontem/data --chain /opt/pontem/genesis.json --keystore-path /opt/pontem/keys --collator --name ${NODE_NAME} --parachain-id 2000 --port 30333 --ws-port 9944 --rpc-port 9933 ${PUBLIC_ADDR_PARACHAIN} ${BOOTNODES_PARACHAIN} -- --execution wasm --chain /opt/pontem/genesis-relaychain.json --port 30334 --ws-port 9945 --rpc-port 9934 ${PUBLIC_ADDR_RELAYCHAIN} ${BOOTNODES_RELAYCHAIN}
+    command: pontem --base-path /opt/pontem/data --chain /opt/pontem/genesis.json --keystore-path /opt/pontem/keys --collator --name ${NODE_NAME} --parachain-id 2000 --port 30333 --ws-port 9944 --rpc-port 9933 ${PUBLIC_ADDR_PARACHAIN} ${BOOTNODES_PARACHAIN} --prometheus-external -- --execution wasm --chain /opt/pontem/genesis-relaychain.json --port 30334 --ws-port 9945 --rpc-port 9934 ${PUBLIC_ADDR_RELAYCHAIN} ${BOOTNODES_RELAYCHAIN}
