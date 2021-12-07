@@ -103,10 +103,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "up{job=\"pontem-node\"} == bool 1",
           "format": "time_series",
@@ -165,10 +162,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "node_time_seconds - node_boot_time_seconds",
           "interval": "",
@@ -227,10 +221,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "node_memory_MemAvailable_bytes",
           "interval": "",
@@ -289,10 +280,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "sum(node_filesystem_free_bytes{fstype=\"ext4\"})",
           "interval": "",
@@ -348,10 +336,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "node_load1{job=\"server\"}",
           "hide": false,
@@ -360,10 +345,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "node_load5{job=\"server\"}",
           "hide": false,
@@ -372,10 +354,7 @@
           "refId": "B"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "node_load15{job=\"server\"}",
           "hide": false,
@@ -428,10 +407,7 @@
       "pluginVersion": "8.3.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
-          },
+          "datasource": "Prometheus",
           "exemplar": true,
           "expr": "substrate_block_height{status=\"best\"}",
           "format": "time_series",
@@ -445,10 +421,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "Prometheus",
       "description": "What your node sees as the highest finalized block ( less than or equal to best)",
       "fieldConfig": {
         "defaults": {
@@ -499,10 +472,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "Prometheus",
       "description": "Total transactions in best block",
       "fieldConfig": {
         "defaults": {
@@ -557,10 +527,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "Prometheus",
       "description": "What your node sees as the highest finalized block ( less than or equal to best)",
       "fieldConfig": {
         "defaults": {
@@ -625,10 +592,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "Prometheus",
       "description": "Number of connected peers",
       "fieldConfig": {
         "defaults": {
@@ -720,10 +684,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "PBFA97CFB590B2093"
-      },
+      "datasource": "Prometheus",
       "description": "histogram 90th quantiles for time to construct a block (seconds) More info: https://prometheus.io/docs/prometheus/latest/querying/functions/#histogram_quantile",
       "fill": 1,
       "fillGradient": 8,
