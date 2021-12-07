@@ -74,6 +74,12 @@ To view all parameters of a node:
 ```sh
 docker-compose run pontem-node pontem --help
 ```
+## Optional: Monitoring
+You can also easily add monitoring to your node (grafana + prometheus):
+```
+docker-compose -f monitoring.docker-compose.yml up -d
+```
+After that open `<your-server-ip>:3000` in browser. Login and password `admin`
 
 ## Documentation
 See [Move VM Pallet documentation](https://docs.pontem.network/02.-getting-started/getting_started).
