@@ -21,12 +21,12 @@ You can customize it, but for the first run it's not that important.
 nano .env # or vi .env # or any editor you choose
 ```
 
-## Step 4: Build docker and generate keys
-*Note: If you want to use prebuild image from the docker hub, uncomment this line ```#image: pontem/pontem:${PONTEM_VERSION}``` in docker-compose.yml and comment out the ```build``` section. Also use ```docker-compose pull``` instead of ```docker-compose build```*
+## Step 4: Generate keys
+*Note: If you want to build image from the source, uncomment the ```build``` section.*
 
-The first thing to do is build the docker container (important note: if you change the `.env` file, you need to rebuild the container).:
+The first thing to do is pull the docker container:
 ```sh
-docker-compose build
+docker-compose pull
 ```
 Now you need to generate an mnemonic phrase for your account (if you don't have one):
 ```sh

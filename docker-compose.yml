@@ -5,14 +5,15 @@ services:
     container_name: pontem-node
     hostname: pontem-node
     restart: always
-    #image: pontem/pontem:${PONTEM_VERSION}
-    build:
-      context: .build
-      dockerfile: ${DOCKERFILE} # If you have errors when building or executing, please read the description in the .env.testnet
-      args:
-        PONTEM_VERSION: ${PONTEM_VERSION}
-        DOVE_VERSION: ${DOVE_VERSION}
-        NODE_VERSION: ${NODE_VERSION}
+    image: pontem/pontem:${PONTEM_VERSION}
+    # If you have errors when building or executing, please read the description in the .env.testnet
+    # build:
+    #   context: .build
+    #   dockerfile: ${DOCKERFILE} 
+    #   args:
+    #     PONTEM_VERSION: ${PONTEM_VERSION}
+    #     DOVE_VERSION: ${DOVE_VERSION}
+    #     NODE_VERSION: ${NODE_VERSION}
     ports:
       - "127.0.0.1:9934:9934"   # relaychain rpc
       - "127.0.0.1:9945:9945"   # relaychain ws
