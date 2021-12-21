@@ -4,9 +4,9 @@
   "chainType": "Local",
   "bootNodes": [
     "/dns/p2p.ams-1.relay.testnet.pontem.network/tcp/20331/p2p/12D3KooWF1GCBYJzc4hTZwXUguvA6vRNAsgBkRoSzcf1zf3gzjgP",
-    "/dns/p2p.fra-1.relay.testnet.pontem.network/tcp/20332/p2p/12D3KooWCStBvaMh7ptbfT5nNx2URspZ7LNcTigc1AAtqEfoBDgG",
-    "/dns/p2p.lon-1.relay.testnet.pontem.network/tcp/20332/p2p/12D3KooWHQkuCHzSixvrKcNRyh4wzAt6rj7MnaBdPKhWBqrDWu6p",
-    "/dns/p2p.sgp-1.relay.testnet.pontem.network/tcp/20332/p2p/12D3KooWD8VpAjpLgZyfXWTMNCLkWW1h4b3XQitQDtLXFkx6cKEj"
+    "/dns/p2p.fra-1.relay.testnet.pontem.network/tcp/20331/p2p/12D3KooWCStBvaMh7ptbfT5nNx2URspZ7LNcTigc1AAtqEfoBDgG",
+    "/dns/p2p.lon-1.relay.testnet.pontem.network/tcp/20331/p2p/12D3KooWHQkuCHzSixvrKcNRyh4wzAt6rj7MnaBdPKhWBqrDWu6p",
+    "/dns/p2p.sgp-1.relay.testnet.pontem.network/tcp/20331/p2p/12D3KooWD8VpAjpLgZyfXWTMNCLkWW1h4b3XQitQDtLXFkx6cKEj"
   ],
   "telemetryEndpoints": null,
   "protocolId": "plktv2",
