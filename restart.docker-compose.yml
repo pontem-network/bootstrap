@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  node-restarter:
+    image: docker:20.10.12-dind
+    container_name: node-restarter
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./scripts:/opt/scripts
+    command: sh /opt/scripts/restart-node.sh
+        
