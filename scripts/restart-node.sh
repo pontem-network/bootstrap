@@ -3,7 +3,7 @@
 while true; do
     LAST_LINE="200"
     FIND_ERRORS="
-    No Nimbus keys available. We will not be able to author
+    Thread 'tokio-runtime-worker' panicked at 'Storage root must match that calculated.'
     "
     IFS=$'\n'
 
