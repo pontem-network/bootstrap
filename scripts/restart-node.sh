@@ -7,12 +7,13 @@ while true; do
 
     docker logs pontem-node -n ${LAST_LINE} >& pontem-node.log
 
-    # set -x
+    #set -x
     for error in "${FIND_ERRORS[@]}"; do
         if grep -iq "${error}" pontem-node.log; then
-            echo 'The error was found.'
-            echo "${error}"
+            echo -e "The error was found: \e[1;31m*** ${error} ***\e[0m"
+            #echo "${error}"
             docker container restart pontem-node
+            echo -e "\e[1;32mThe node was restarted at $(date '+%F %H:%M')\e[0m"
         fi
     done
 
