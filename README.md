@@ -81,5 +81,22 @@ docker-compose -f monitoring.docker-compose.yml up -d
 ```
 After that open `<your-server-ip>:3000` in browser. Login and password `admin`
 
+## Adding automatic node restart in case of 'Storage root must match that calculated' error
+Sometimes you may see this error in the logs:
+```log
+[Parachain] panicked at 'Storage root must match that calculated.', /root/.cargo/git/checkouts/substrate-7e08433d4c370a21/57346f6/frame/executive/src/lib.rs:503:9
+[Parachain] Block prepare storage changes error: ...
+[Parachain] 💔 Error importing block ...
+```
+This can be fixed by restarting the node. To automate this process, you can run node-restarter in a separate container. It will monitor log messages and, if an error is detected, it will automatically restart the node. To start the node-restarter:
+```
+docker-compose -f restart.docker-compose.yml up -d
+```
+To see if this error occurred and if the node was restarted:
+```
+docker-compose -f restart.docker-compose.yml logs -f --tail 10
+```
 ## Documentation
 See [Move VM Pallet documentation](https://docs.pontem.network/02.-getting-started/getting_started).
+## FAQ
+See [Staking FAQ](https://docs.pontem.network/03.-staking/faq).
